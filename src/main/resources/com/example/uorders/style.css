@@ -1,0 +1,8 @@
+.button{
+  -fx-background-color : #4d4d4d;
+  -fx-background-radius:500;
+}
+#navbar{
+  -fx-color : #4d4d4d;
+  -fx-background-radius:90;
+}
