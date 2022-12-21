@@ -66,7 +66,7 @@
                 </Button>
                 <ImageView fitHeight="107.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                     <image>
-                        <Image url="@assets/p2.png" />
+                        <Image url="@p2.png" />
                     </image>
                     <GridPane.margin>
                         <Insets left="10.0" />
