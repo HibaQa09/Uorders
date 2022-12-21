@@ -15,7 +15,7 @@
          <image>
             <Image url="@../bg_fx.png" />
          </image>
-      </ImageView>
+      </ImageView>deriuu
       <Label layoutX="95.0" layoutY="29.0" prefHeight="17.0" prefWidth="173.0" style="-fx-text-fill: orange;" text="Add Payement card">
          <font>
             <Font name="Avenir Next Bold" size="14.0" />
