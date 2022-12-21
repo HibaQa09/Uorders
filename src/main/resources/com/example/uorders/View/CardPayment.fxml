@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="613.0" fitWidth="344.0" layoutX="-1.0" layoutY="-7.0">
          <image>
-            <Image url="@WhatsApp%20Image%202022-12-17%20at%2010.12.57%20PM.jpeg" />
+            <Image url="@../icons8-debit-card-50.png" />
          </image>
       </ImageView>
       <Label layoutX="95.0" layoutY="29.0" prefHeight="17.0" prefWidth="173.0" style="-fx-text-fill: orange;" text="Add Payement card">
@@ -43,27 +43,27 @@
       <Button layoutX="95.0" layoutY="400.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="142.0" style="-fx-background-color: orange; -fx-border-radius: 30;" text="Add Card" />
       <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="28.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Uorders/src/main/resources/com/example/uorders/icons8-user-24.png" />
+            <Image url="@../icons8-user-24.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="28.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Uorders/src/main/resources/com/example/uorders/icons8-debit-card-50.png" />
+            <Image url="@../icons8-debit-card-50.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="32.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Uorders/src/main/resources/com/example/uorders/icons8-calendar-48.png" />
+            <Image url="@../icons8-calendar-48.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="88.0" fitWidth="27.0" layoutX="197.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Uorders/src/main/resources/com/example/uorders/icons8-cvc-48.png" />
+            <Image url="@../icons8-cvc-48.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="32.0" layoutY="264.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Uorders/src/main/resources/com/example/uorders/icons8-bookmark-50.png" />
+            <Image url="@../icons8-bookmark-50.png" />
          </image>
       </ImageView>
    </children>
