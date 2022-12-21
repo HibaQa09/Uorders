@@ -76,7 +76,7 @@
         </Label>
         <ImageView fitHeight="58.0" fitWidth="57.0" layoutX="65.0" layoutY="119.0">
             <image>
-                <Image url="@../breakfast.png" />
+                <Image url="@../Assets/breakfast.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="58.0" fitWidth="57.0" layoutX="211.0" layoutY="119.0">
@@ -111,7 +111,7 @@
         </ImageView>
         <ImageView fitHeight="66.0" fitWidth="65.0" layoutX="208.0" layoutY="458.0">
             <image>
-                <Image url="@../drinks.png" />
+                <Image url="@../Assets/drinks.png" />
             </image>
         </ImageView>
         <TextField id="navbar" alignment="CENTER" layoutX="79.0" layoutY="22.0" prefHeight="26.0" prefWidth="175.0" promptText="what can we get fro u ?" style="-fx-background-radius: 90; -fx-background-color: #4d4d4d;" styleClass="navbar" stylesheets="@../style.css" />
