@@ -6,3 +6,9 @@
   -fx-color : #4d4d4d;
   -fx-background-radius:90;
 }
+.button:hover {
+  -fx-background-color :  #616161;
+  -fx-scale-x: 1.2;
+  -fx-scale-y: 1.2;
+  -fx-scale-z: 1.2;
+}

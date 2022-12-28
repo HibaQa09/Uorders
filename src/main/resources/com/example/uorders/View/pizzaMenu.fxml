@@ -12,23 +12,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" styleClass="root" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" stylesheets="@../style.css" styleClass="root" xmlns="http://javafx.com/javafx/19" >
     <children>
         <ImageView fitHeight="600.0" fitWidth="342.0" layoutX="-4.0">
          <image>
-            <Image url="@../bg_fx.png" />
+            <Image url="@../Assets/bg_fx.png" />
          </image>
       </ImageView>
 
         <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="278.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../icons8-shopping-cart-48.png" />
+                <Image url="@../Assets/icons8-shopping-cart-48.png" />
             </image>
         </ImageView>
 
         <ImageView fitHeight="56.0" fitWidth="30.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../icons8-menu-squared-50.png" />
+                <Image url="@../Assets/icons8-menu-squared-50.png" />
             </image>
         </ImageView>
 
@@ -78,7 +78,7 @@
                 </Button>
                 <ImageView fitHeight="107.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                     <image>
-                        <Image url="@../p2.png" />
+                        <Image url="@../Assets/p2.png" />
                     </image>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -86,7 +86,7 @@
                 </ImageView>
                 <ImageView fitHeight="107.0" fitWidth="163.0" layoutX="10.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                     <image>
-                        <Image url="@../p1.png" />
+                        <Image url="@../Assets/p1.png" />
                     </image>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -94,7 +94,7 @@
                 </ImageView>
                 <ImageView fitHeight="107.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <image>
-                        <Image url="@../p3.png" />
+                        <Image url="@../Assets/p3.png" />
                     </image>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -102,7 +102,7 @@
                 </ImageView>
                 <ImageView fitHeight="107.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <image>
-                        <Image url="@../p4.png" />
+                        <Image url="@../Assets/p4.png" />
                     </image>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -110,7 +110,7 @@
                 </ImageView>
                 <ImageView fitHeight="107.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                     <image>
-                        <Image url="@../p5.png" />
+                        <Image url="@../Assets/p5.png" />
                     </image>
                     <GridPane.margin>
                         <Insets left="10.0" />
@@ -118,7 +118,7 @@
                 </ImageView>
                 <ImageView fitHeight="107.0" fitWidth="163.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                     <image>
-                        <Image url="@../p6.png" />
+                        <Image url="@../Assets/p6.png" />
                     </image>
                     <GridPane.margin>
                         <Insets left="10.0" />

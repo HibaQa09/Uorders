@@ -8,32 +8,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uorders.HelloController">
+<AnchorPane fx:id="MyPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uorders.MenuController">
     <children>
         <ImageView fitHeight="600.0" fitWidth="342.0" layoutX="-4.0">
             <image>
-                <Image url="@../bg_fx.png" />
+                <Image url="@../Assets/bg_fx.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="278.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="CartButton" fitHeight="30.0" fitWidth="49.0" layoutX="278.0" layoutY="20.0" onDragDetected="#OpenCart" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../icons8-shopping-cart-48.png" />
+                <Image url="@../Assets/icons8-shopping-cart-48.png" />
             </image>
         </ImageView>
 
         <ImageView fitHeight="56.0" fitWidth="30.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../icons8-menu-squared-50.png" />
+                <Image url="@../Assets/icons8-menu-squared-50.png" />
             </image>
         </ImageView>
-        <Button layoutX="46.0" layoutY="108.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="94.0" />
-        <Button layoutX="193.0" layoutY="108.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
-        <Button layoutX="46.0" layoutY="219.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
-        <Button layoutX="46.0" layoutY="336.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
+        <Button fx:id="BreakfastButton" layoutX="46.0" layoutY="108.0" mnemonicParsing="false" onAction="#OpenBreakfastMenu" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
+        <Button fx:id="SaladButton" layoutX="193.0" layoutY="108.0" mnemonicParsing="false" onAction="#OpenSaladMenu" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
+        <Button fx:id="SandwichButton" layoutX="46.0" layoutY="219.0" mnemonicParsing="false" onAction="#OpenSandwichMenu" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
+        <Button fx:id="BeldiButton" layoutX="46.0" layoutY="336.0" mnemonicParsing="false" onAction="#OpenBeldiMenu" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
         <Button layoutX="46.0" layoutY="454.0" mnemonicParsing="false" prefHeight="93.0" prefWidth="94.0" stylesheets="@../style.css" />
-        <Button layoutX="193.0" layoutY="219.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
-        <Button layoutX="193.0" layoutY="336.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
-        <Button layoutX="193.0" layoutY="454.0" mnemonicParsing="false" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
+        <Button fx:id="TacosButton" layoutX="193.0" layoutY="219.0" mnemonicParsing="false" onAction="#OpenTacosMenu" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
+        <Button fx:id="PizzaButton" layoutX="193.0" layoutY="336.0" mnemonicParsing="false" onAction="#OpenPizzaMenu" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
+        <Button fx:id="DrinksButton" layoutX="193.0" layoutY="454.0" mnemonicParsing="false" onAction="#OpenDrinksMenu" prefHeight="94.0" prefWidth="94.0" stylesheets="@../style.css" />
         <Label layoutX="69.0" layoutY="177.0" text="breakfast" textFill="WHITE">
             <font>
                 <Font name="Ebrima" size="12.0" />
@@ -81,32 +81,32 @@
         </ImageView>
         <ImageView fitHeight="58.0" fitWidth="57.0" layoutX="211.0" layoutY="119.0">
             <image>
-                <Image url="@../salad.png" />
+                <Image url="@../Assets/salad.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="48.0" fitWidth="57.0" layoutX="65.0" layoutY="237.0">
             <image>
-                <Image url="@../sandwich.png" />
+                <Image url="@../Assets/sandwich.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="66.0" fitWidth="75.0" layoutX="203.0" layoutY="233.0">
             <image>
-                <Image url="@../wrap.png" />
+                <Image url="@../Assets/wrap.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="58.0" fitWidth="75.0" layoutX="56.0" layoutY="345.0">
             <image>
-                <Image url="@../beldi.png" />
+                <Image url="@../Assets/beldi.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="58.0" fitWidth="65.0" layoutX="207.0" layoutY="354.0">
             <image>
-                <Image url="@../pizza.png" />
+                <Image url="@../Assets/pizza.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="66.0" fitWidth="75.0" layoutX="56.0" layoutY="458.0">
+        <ImageView fx:id="PastaButton" fitHeight="66.0" fitWidth="75.0" layoutX="56.0" layoutY="458.0" onDragDetected="#OpenPastaMenu">
             <image>
-                <Image url="@../pasta.png" />
+                <Image url="@../Assets/pasta.png" />
             </image>
         </ImageView>
         <ImageView fitHeight="66.0" fitWidth="65.0" layoutX="208.0" layoutY="458.0">
@@ -115,6 +115,8 @@
             </image>
         </ImageView>
         <TextField id="navbar" alignment="CENTER" layoutX="79.0" layoutY="22.0" prefHeight="26.0" prefWidth="175.0" promptText="what can we get fro u ?" style="-fx-background-radius: 90; -fx-background-color: #4d4d4d;" styleClass="navbar" stylesheets="@../style.css" />
-        <Button layoutX="14.0" layoutY="14.0" minWidth="49.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="49.0" style="-fx-background-color: transparent;" />
+        <Button fx:id="MenuButton" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#ShowMenu" prefHeight="41.0" prefWidth="48.0" style="-fx-background-color: transparent;" />
+        <Button fx:id="CartButton0" layoutX="272.0" layoutY="17.0" mnemonicParsing="false" onAction="#Cart" prefHeight="41.0" prefWidth="48.0" style="-fx-background-color: transparent;" />
+
     </children>
 </AnchorPane>

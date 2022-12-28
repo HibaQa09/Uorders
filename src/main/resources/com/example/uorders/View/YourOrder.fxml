@@ -14,19 +14,19 @@
     <children>
         <ImageView fitHeight="600.0" fitWidth="342.0" layoutX="-4.0">
          <image>
-            <Image url="@../bg_fx.png" />
+            <Image url="@../Assets/bg_fx.png" />
          </image>
       </ImageView>
 
         <ImageView fitHeight="30.0" fitWidth="49.0" layoutX="278.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../icons8-shopping-cart-48.png" />
+                <Image url="@../Assets/icons8-shopping-cart-48.png" />
             </image>
         </ImageView>
 
         <ImageView fitHeight="56.0" fitWidth="30.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../icons8-menu-squared-50.png" />
+                <Image url="@../Assets/icons8-menu-squared-50.png" />
             </image>
         </ImageView>
 
@@ -37,7 +37,7 @@
         </Text>
         <ImageView fitHeight="66.0" fitWidth="74.0" layoutX="21.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../p3.png" />
+                <Image url="@../Assets/p3.png" />
             </image>
         </ImageView>
         <Text fill="WHITE" layoutX="112.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x1 Pizza peppreroni ">
