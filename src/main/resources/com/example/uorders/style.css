@@ -12,3 +12,8 @@
   -fx-scale-y: 1.2;
   -fx-scale-z: 1.2;
 }
+
+.btn{
+    -fx-background-color : #f7710a;
+    -fx-background-radius:500;
+}
