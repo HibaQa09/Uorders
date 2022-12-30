@@ -57,7 +57,7 @@
 
         <ImageView fitHeight="56.0" fitWidth="30.0" layoutX="32.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../Assets/return.png" />
+                <Image url="@../Assets/icons8-back-arrow-50.png" />
             </image>
         </ImageView>
 
