@@ -74,7 +74,7 @@
          <Font name="Devanagari MT" size="17.0"/>
       </font>
    </Label>
-   <ImageView fx:id="menuButton" fitHeight="56.0" fitWidth="30.0" layoutY="44.0" onMouseClicked="#MenuSideBar"
+   <ImageView fx:id="menuButton" fitHeight="56.0" fitWidth="30.0" layoutY="44.0"
               pickOnBounds="true" preserveRatio="true">
       <image>
          <Image url="@../Assets/icons8-menu-squared-50.png"/>
