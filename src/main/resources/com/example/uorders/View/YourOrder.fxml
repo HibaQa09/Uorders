@@ -30,7 +30,7 @@
             </image>
         </ImageView>
 
-        <Text fill="#ffce0a" layoutX="97.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Order">
+        <Text fill="#de8a23" layoutX="97.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Order">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
@@ -46,7 +46,7 @@
             </font>
         </Text>
         <Text fill="WHITE" layoutX="272.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30 Dhs" />
-        <Text fill="#ffce0a" layoutX="43.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method">
+        <Text fill="#de8a23" layoutX="43.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>
@@ -61,7 +61,7 @@
                 <Font size="14.0" />
             </font>
         </RadioButton>
-        <Text fill="#ffce0a" layoutX="43.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Summary">
+        <Text fill="#de8a23" layoutX="43.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Summary">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>
@@ -78,10 +78,13 @@
         </Text>
         <Text fill="WHITE" layoutX="265.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30 Dhs" />
         <Text fill="WHITE" layoutX="265.0" layoutY="482.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30 Dhs" />
-        <Button layoutX="111.0" layoutY="541.0" mnemonicParsing="false" text="Confirm order">
+        <Button layoutX="111.0" layoutY="541.0" mnemonicParsing="false" style="-fx-background-color: #de8a23;" text="Confirm order" textFill="WHITE">
             <effect>
                 <DropShadow />
             </effect>
+         <font>
+            <Font size="14.0" />
+         </font>
         </Button>
 
     </children>
