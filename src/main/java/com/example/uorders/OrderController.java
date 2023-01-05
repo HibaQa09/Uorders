@@ -51,6 +51,7 @@ public class OrderController {
     @FXML
     private AnchorPane MyPanel;
     private Parent fxml;
+    private Stage stage1 ;
 
 
     @FXML
@@ -73,7 +74,7 @@ public class OrderController {
     @FXML
     void ProceedToConfirmation(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
-        Stage stage1 = new Stage();
+        stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
         fxml = FXMLLoader.load(getClass().getResource("View/YourOrder.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
@@ -91,7 +92,6 @@ public class OrderController {
     void Cart(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
         //Stage stage1 = new Stage();
-        Stage stage1 ;
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
         fxml = FXMLLoader.load(getClass().getResource("View/YourOrder.fxml"));
         Scene scene = new Scene(fxml);
@@ -102,7 +102,6 @@ public class OrderController {
     @FXML
     void Return(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
-        Stage stage1 ;
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
         fxml = FXMLLoader.load(getClass().getResource("View/MenuView.fxml"));
         Scene scene = new Scene(fxml);
