@@ -12,7 +12,7 @@ public class ConnectionDB {
             Class.forName("com.mysql.jdbc.Driver");
 
             // 2 Créer la connexion
-            con = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3301/UordersDB" , "root","");
+            con = (Connection) DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/tp_cs" , "root","");
             System.out.println("Connection is created successfully:");
 
             //3 Créer un état de connexion

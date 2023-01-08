@@ -163,7 +163,13 @@ public class MenuController {
 
     }
     @FXML
-    void ShowMenu(ActionEvent event) {
+    void ShowMenu(ActionEvent event) throws IOException {
+        MyPanel.getScene().getWindow().hide();
+        stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
+        fxml = FXMLLoader.load(getClass().getResource("View/SidebarView.fxml"));
+        Scene scene = new Scene(fxml);
+        stage1.setScene(scene);
+        stage1.show();
 
     }
 
