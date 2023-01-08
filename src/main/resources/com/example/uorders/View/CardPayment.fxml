@@ -11,7 +11,7 @@
 
 <AnchorPane fx:id="Panel1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uorders.AddCardController">
    <children>
-      <ImageView fitHeight="613.0" fitWidth="344.0" layoutX="-6.0" layoutY="-6.0">
+      <ImageView fitHeight="613.0" fitWidth="344.0" layoutX="-1.0">
          <image>
             <Image url="@../Assets/bg_fx.png" />
          </image>
@@ -54,11 +54,12 @@
       </ImageView>
       <TextField fx:id="NameCard" layoutX="72.0" layoutY="108.0" promptText="Name On Card" />
       <TextField fx:id="CardNumber" layoutX="68.0" layoutY="159.0" promptText="4242 4242 4242 4242" />
-      <TextField fx:id="expDate" layoutX="59.0" layoutY="223.0" prefHeight="26.0" prefWidth="91.0" promptText="MM/YY" />
+      <TextField fx:id="expDate" layoutX="68.0" layoutY="225.0" prefHeight="23.0" prefWidth="78.0" promptText="MM/YY" style="-fx-background-color: transparent;">
+         <font>
+            <Font size="12.0" />
+         </font></TextField>
       <TextField fx:id="cVc" layoutX="234.0" layoutY="223.0" prefHeight="26.0" prefWidth="68.0" promptText="CVC" />
       <TextField fx:id="labelCard" layoutX="63.0" layoutY="265.0" promptText="Label for this card" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-41.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-5.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="backButton" fitHeight="26.0" fitWidth="27.0" layoutX="5.0" layoutY="8.0" onMouseClicked="#back">
          <image>
             <Image url="@../Assets/icons8-back-arrow-50.png" />
