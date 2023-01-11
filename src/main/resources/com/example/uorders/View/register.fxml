@@ -15,7 +15,7 @@
             <Image url="@../Assets/bg_fx.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="BackButton" fitHeight="56.0" fitWidth="30.0" layoutX="32.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="BackButton" fitHeight="56.0" fitWidth="30.0" layoutX="32.0" layoutY="23.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Assets/icons8-back-arrow-50.png" />
          </image>
