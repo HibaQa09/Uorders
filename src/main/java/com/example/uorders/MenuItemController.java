@@ -33,17 +33,6 @@ public class MenuItemController {
 
     private Stage itemMenu;
 
-    @FXML
-    void OpenYourOrder(ActionEvent event) throws IOException {
-        Menu.getScene().getWindow().hide();
-        itemMenu = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/YourOrder.fxml"));
-        Scene scene = new Scene(fxml);
-        itemMenu.setScene(scene);
-        itemMenu.show();
-
-    }
-
 
     @FXML
     void back(MouseEvent event) throws IOException {

@@ -55,7 +55,7 @@ public class RegisterController {
         MyPanel.getScene().getWindow().hide();
         Stage stage1 = new Stage();
         //back Login
-        //fxml = FXMLLoader.load(getClass().getResource("View/MenuView.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/MenuView.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
         stage1.show();
