@@ -13,6 +13,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 public class MenuController {
 
@@ -58,6 +60,12 @@ public class MenuController {
     private Stage stage1 ;
 
 
+
+    ConnectionDB  connection ;
+    PreparedStatement preparedStatement;
+
+
+
     @FXML
     void OpenBeldiMenu(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
@@ -73,7 +81,7 @@ public class MenuController {
     void OpenBreakfastMenu(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/pizzaMenu.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/MenuItem.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
         stage1.show();
@@ -81,7 +89,13 @@ public class MenuController {
     }
 
     @FXML
-    void OpenCart(MouseEvent event)  {
+    void OpenCart(MouseEvent event) throws IOException {
+        MyPanel.getScene().getWindow().hide();
+        stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
+        fxml = FXMLLoader.load(getClass().getResource("View/YourOrder.fxml"));
+        Scene scene = new Scene(fxml);
+        stage1.setScene(scene);
+        stage1.show();
 
 
     }
@@ -90,7 +104,7 @@ public class MenuController {
     void OpenDrinksMenu(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/pizzaMenu.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/MenuItem.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
         stage1.show();
@@ -101,7 +115,7 @@ public class MenuController {
     void OpenPastaMenu(MouseEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/pizzaMenu.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/MenuItem.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
         stage1.show();
@@ -112,7 +126,7 @@ public class MenuController {
     void OpenPizzaMenu(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/pizzaMenu.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/MenuItem.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
         stage1.show();
@@ -123,7 +137,7 @@ public class MenuController {
     void OpenSaladMenu(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/pizzaMenu.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/MenuItem.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
         stage1.show();
@@ -134,7 +148,7 @@ public class MenuController {
     void OpenSandwichMenu(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/pizzaMenu.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/MenuItem.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
         stage1.show();
@@ -145,7 +159,7 @@ public class MenuController {
     void OpenTacosMenu(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/pizzaMenu.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/MenuItem.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
         stage1.show();
