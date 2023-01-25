@@ -101,7 +101,7 @@ public class OrderController {
     void Return(ActionEvent event) throws IOException {
         MyPanel.getScene().getWindow().hide();
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/MenuView.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/FirstPage.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
         stage1.show();

@@ -1,4 +1,5 @@
 package com.example.uorders;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
+import com.example.models.CardPaymentModel;
 import java.io.IOException;
 
 public class AddCardController {
@@ -42,7 +43,6 @@ public class AddCardController {
 
         @FXML
         void Addcard(ActionEvent event) {
-
 
         }
 
