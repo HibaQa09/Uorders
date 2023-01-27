@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -36,6 +37,9 @@ public class YourOrderController {
 
     @FXML
     private ImageView backButton;
+
+    @FXML
+    private TextField CommentsArea;
 
     @FXML
     void back(MouseEvent event) throws IOException {
@@ -77,6 +81,14 @@ public class YourOrderController {
         Scene scene = new Scene(fxml);
         stageOrder.setScene(scene);
         stageOrder.show();
+
+    }
+
+    @FXML
+    void ShowComment(ActionEvent event) {
+        CommentsArea.setVisible(true);
+        String comnt = CommentsArea.getText();
+
 
     }
 
