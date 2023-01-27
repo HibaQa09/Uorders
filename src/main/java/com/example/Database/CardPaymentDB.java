@@ -24,6 +24,12 @@ public class CardPaymentDB {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Please fill all fields");
                 alert.show();
+            }else if(CardNumber.length()==16){
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("Please Make sure You have inserted all 16 digits of your card");
+                    alert.show();
+
+
 
             } else {
 
