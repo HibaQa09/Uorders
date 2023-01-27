@@ -1,5 +1,6 @@
 package com.example.uorders;
 
+import com.example.models.registerModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,14 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import com.example.models.CardPaymentModel;
 import java.io.IOException;
+import java.time.LocalDate;
+
+import com.example.models.CardPaymentModel;
+
+import static com.example.Database.CardPaymentDB.Add;
+import static com.example.Database.RegisterDB.SignUp;
+
+
 
 public class AddCardController {
 
@@ -44,9 +53,16 @@ public class AddCardController {
         @FXML
         void Addcard(ActionEvent event) {
 
-        }
+            CardPaymentModel Card = new CardPaymentModel();
+            Card.setName(NameCard.getText());
+            Card.setCardNumber(Integer.parseInt(CardNumber.getText()));
+            Card.setExpDate(LocalDate.parse(expDate.getText()));
+            Card.setCvc(Integer.parseInt(cVc.getText()));
+            Card.setLabel(labelCard.getText());
 
-        @FXML
+            Add(  Card.getCardNumber(),  Card.getName(),  Card.getExpDate(), Card.getCvc(),  Card.getLabel());
+        }
+            @FXML
         void back(MouseEvent event) throws IOException {
                 Panel1.getScene().getWindow().hide();
                 Stage stage1 = new Stage();

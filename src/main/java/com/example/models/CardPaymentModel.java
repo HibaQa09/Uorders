@@ -10,7 +10,7 @@ public class CardPaymentModel {
     private LocalDate ExpDate;
     private  int Cvc;
     private  String Label;
-    private CardPaymentModel(){
+    public CardPaymentModel(){
         super();
     }
 

@@ -1,11 +1,53 @@
 package com.example.Database;
 
 import com.example.models.CardPaymentModel;
+import javafx.scene.control.Alert;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.time.LocalDate;
 
 public class CardPaymentDB {
-    //Add card
+    public static void Add(int CardNumber, String NameCard, LocalDate dateexp, int cvc, String Label) {
 
+        try {
+
+            Connection con = ConnectionDB.getConnexion();
+            Statement st;
+            st = (Statement) ((java.sql.Connection) con).createStatement();
+            ResultSet rs = st.executeQuery("select * from CardPayment where CardNumber = '" + CardNumber + "'");
+            if (CardNumber == 0 || NameCard.isEmpty() || dateexp == null || cvc == 0 || Label.isEmpty()) {
+
+                System.out.println("Fields empty");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Please fill all fields");
+                alert.show();
+
+            } else {
+
+                if (rs.next() && rs.getInt(1) > 0) {
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("Card already in use");
+                    alert.show();
+                } else {
+                    String sql = ("INSERT INTO CardPayment VALUES('" + CardNumber + "','" + NameCard + "','" + dateexp + "','" + cvc + "','" + Label + "')");
+                    st.executeUpdate(sql);
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setContentText("Card Added with success ");
+                    alert.show();
+
+                }
+            }
+
+
+        } catch (SQLException e1) {
+            e1.printStackTrace();
+        }
 
 
     }
+}
 
