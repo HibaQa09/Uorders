@@ -1,4 +1,4 @@
-package com.example.Controller;
+package com.example.uorders;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

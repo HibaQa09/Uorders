@@ -1,6 +1,6 @@
-package com.example.Controller;
+package com.example.uorders;
 
-import com.example.model.FinalOrder;
+import com.example.models.FinalOrder;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;

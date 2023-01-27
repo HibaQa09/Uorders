@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.models;
 
 import javafx.scene.control.Button;
 
@@ -41,12 +41,11 @@ public class Item {
         this.detailsItem = detailsItem;
     }
 
-    public int getChosenMenu(Button clickedBtn) {
-        int id = Integer.parseInt(clickedBtn.getId());
-        return id;
+
+
+
+
     }
 
-
-}
 
 

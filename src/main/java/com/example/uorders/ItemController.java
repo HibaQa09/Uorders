@@ -1,6 +1,6 @@
-package com.example.Controller;
+package com.example.uorders;
 
-import com.example.model.Item;
+import com.example.models.Item;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -38,15 +38,9 @@ public class ItemController {
             detailsItem.setText(item.getDetailsItem());
             String path = item.getImgItem();
             File file = new File(path);
-           /// File file = new File("src/main/resources/com/example/Controller/Assets/breakfast1.png");
             String localUrl = file.toURI().toURL().toString();
             Image thumbnail = new Image(localUrl,false);
             imgItem.setImage(thumbnail);
-
-           /* Image img = new Image(item.getImgItem());
-            imgItem = new ImageView();
-            imgItem.setImage(img);*/
-
 
         }
     }
