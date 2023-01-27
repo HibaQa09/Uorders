@@ -16,7 +16,7 @@ public class RegisterDB {
             Connection con = ConnectionDB.getConnexion();
             Statement st;
             st = (Statement) ((java.sql.Connection) con).createStatement();
-            ResultSet rs = st.executeQuery("select * from customer where EmailCus = '"+Email+"'");
+            ResultSet rs1= st.executeQuery("SELECT COUNT(*) FROM customer WHERE EmailCus = '"+Email+"'");
             if(FirstName.isEmpty() || LastName.isEmpty() || Email.isEmpty() || Mdp.isEmpty() || CMdp.isEmpty()){
 
                 System.out.println("Fields empty");
@@ -26,17 +26,28 @@ public class RegisterDB {
 
             }else{
 
-                if(rs.next() && rs.getInt(1)>0){
+                if(rs1.next() && rs1.getInt(1)>0){
                     System.out.println("Student already exists");
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setContentText("Email already in use");
                     alert.show();
+
                 }else{
-                    String sql = ("INSERT INTO customer VALUES('"+Id+"','"+FirstName+"','"+LastName+"','"+Email+"','"+Mdp+"')");
-                    st.executeUpdate(sql);
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setContentText("Registration complete");
-                    alert.show();
+
+                    if(!Mdp.equals(CMdp)){
+
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setContentText("Please make sure your passwords match");
+                        alert.show();
+
+                    }else{
+                        String sql = ("INSERT INTO customer VALUES('"+Id+"','"+FirstName+"','"+LastName+"','"+Email+"','"+Mdp+"')");
+                        st.executeUpdate(sql);
+                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        alert.setContentText("Registration complete");
+                        alert.show();
+                    }
+
 
                 }
             }

@@ -56,11 +56,17 @@ public class RegisterController {
 
 
 
-    public void back(MouseEvent mouseEvent) {
-
+    public void back(MouseEvent mouseEvent) throws IOException {
+        Panel.getScene().getWindow().hide();
+        stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        fxml = FXMLLoader.load(getClass().getResource("View/CardPayment.fxml"));
+        Scene scene = new Scene(fxml);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void register(javafx.event.ActionEvent event) {
+    public void register(javafx.event.ActionEvent event) throws IOException {
+
         user = new registerModel();
         user.setFirstName( FirstName.getText());
         user.setLastName( LastName.getText() );
@@ -69,5 +75,11 @@ public class RegisterController {
         user.setPasswrdConfirmation( CMdp.getText() );
 
         SignUp (user.getId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPasswrd(), user.getPasswrdConfirmation());
+        Panel.getScene().getWindow().hide();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        fxml = FXMLLoader.load(getClass().getResource("View/CardPayment.fxml"));
+        Scene scene = new Scene(fxml);
+        stage.setScene(scene);
+        stage.show();
     }
 }
