@@ -1,9 +1,9 @@
-package com.example.uorders;
+/*package com.example.uorders;
 
 import com.example.Database.ConnectionDB;
 import com.example.models.CategoryModel;
 import com.example.models.ChosenItem;
-import com.example.models.OrderItemModel;
+
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -170,7 +170,7 @@ public class OrderController implements Initializable {
         stage1.setScene(scene);
         stage1.show();*/
 
-
+/*
             TranslateTransition translate = new TranslateTransition();
             translate.setNode(ItemPane);
             ItemPane.setVisible(true);
@@ -233,4 +233,4 @@ public class OrderController implements Initializable {
 
 
     }
-}
+}*/

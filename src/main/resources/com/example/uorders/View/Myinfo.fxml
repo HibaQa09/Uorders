@@ -10,29 +10,29 @@
 
 <AnchorPane prefHeight="630.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uorders.Myinfo">
    <children>
-      <ImageView fitHeight="681.0" fitWidth="363.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="MyPanel" fitHeight="681.0" fitWidth="363.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../../../../../Desktop/qtis6.png" />
          </image>
       </ImageView>
-      <TextField layoutX="74.0" layoutY="163.0" opacity="0.32" prefHeight="33.0" prefWidth="222.0" text="ilias manadir" />
-      <TextField layoutX="74.0" layoutY="300.0" opacity="0.32" prefHeight="31.0" prefWidth="222.0" text="iliasmanadir@yahoo.fr" />
-      <TextField layoutX="74.0" layoutY="231.0" opacity="0.32" prefHeight="31.0" prefWidth="222.0" text="2000132">
+      <TextField fx:id="name" layoutX="74.0" layoutY="163.0" opacity="0.32" prefHeight="33.0" prefWidth="222.0" text="ilias manadir" />
+      <TextField fx:id="email" layoutX="74.0" layoutY="300.0" opacity="0.32" prefHeight="31.0" prefWidth="222.0" text="iliasmanadir@yahoo.fr" />
+      <TextField fx:id="idcard" layoutX="74.0" layoutY="231.0" opacity="0.32" prefHeight="31.0" prefWidth="222.0" text="2000132">
          <font>
             <Font name="Arial" size="13.0" />
          </font>
       </TextField>
-      <Button layoutX="74.0" layoutY="363.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: 170;" styleClass="..\style.css" text="Change password" textAlignment="CENTER" textFill="#ff8800" textOverrun="CENTER_WORD_ELLIPSIS" underline="true" wrapText="true">
+      <Button fx:id="change" layoutX="74.0" layoutY="363.0" mnemonicParsing="false" onMouseClicked="#changep" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: 170;" styleClass="..\style.css" text="Change password" textAlignment="CENTER" textFill="#ff8800" textOverrun="CENTER_WORD_ELLIPSIS" underline="true" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="74.0" layoutY="429.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: 250;" text="Payment method" textFill="#ff9803" underline="true" wrapText="true">
+      <Button fx:id="paymentM" layoutX="74.0" layoutY="429.0" mnemonicParsing="false" onMouseClicked="#paymentm" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: 250;" text="Payment method" textFill="#ff9803" underline="true" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Text fill="WHITE" layoutX="32.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My informations">
+      <Text fx:id="label_myinfo" fill="WHITE" layoutX="32.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My informations">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>

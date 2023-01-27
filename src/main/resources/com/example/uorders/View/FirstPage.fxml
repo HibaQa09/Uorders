@@ -7,24 +7,24 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="pan1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="pan1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uorders.firstPageController">
    <children>
-      <ImageView fitHeight="637.0" fitWidth="335.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="panel" fitHeight="637.0" fitWidth="335.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Assets/qtis1.png" />
          </image>
       </ImageView>
-      <Button layoutX="88.0" layoutY="461.0" mnemonicParsing="false"  prefHeight="39.0" prefWidth="159.0" styleClass="btn" stylesheets="@../style.css" text="Login" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
+      <Button fx:id="Loginb" layoutX="88.0" layoutY="461.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="39.0" prefWidth="159.0" styleClass="btn" stylesheets="@../style.css" text="Login" textFill="WHITE" textOverrun="LEADING_ELLIPSIS">
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Button alignment="TOP_CENTER" layoutX="125.0" layoutY="512.0" mnemonicParsing="false" opacity="0.96" prefHeight="25.0" prefWidth="96.0" stylesheets="@../style.css" text="or register" textFill="WHITE" underline="true" />
-      <Text fill="WHITE" layoutX="24.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order your food by one click" textAlignment="CENTER" wrappingWidth="287.13671875">
+      <Button fx:id="registerb" alignment="TOP_CENTER" layoutX="125.0" layoutY="512.0" mnemonicParsing="false" onMouseClicked="#register" opacity="0.96" prefHeight="25.0" prefWidth="96.0" stylesheets="@../style.css" text="or register" textFill="WHITE" underline="true" />
+      <Text fx:id="label_pres" fill="WHITE" layoutX="24.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order your food by one click" textAlignment="CENTER" wrappingWidth="287.13671875">
          <font>
             <Font name="Arial Rounded MT Bold" size="20.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="24.0" layoutY="396.0" nodeOrientation="LEFT_TO_RIGHT" stroke="WHITE" strokeWidth="0.0" text="Welcome to U Village" textAlignment="CENTER" wrappingWidth="287.13671875">
+      <Text fx:id="label_welcome" fill="WHITE" layoutX="24.0" layoutY="396.0" nodeOrientation="LEFT_TO_RIGHT" stroke="WHITE" strokeWidth="0.0" text="Welcome to U Village" textAlignment="CENTER" wrappingWidth="287.13671875">
          <font>
             <Font name="Arial Rounded MT Bold" size="20.0" />
          </font>

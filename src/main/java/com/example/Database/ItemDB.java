@@ -1,5 +1,5 @@
 package com.example.Database;
-import com.example.model.Item;
+import com.example.models.Item;
 
 import java.sql.*;
 
