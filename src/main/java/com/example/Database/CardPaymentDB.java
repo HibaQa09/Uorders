@@ -10,7 +10,7 @@ import java.sql.Statement;
 import java.time.LocalDate;
 
 public class CardPaymentDB {
-    public static void Add(int CardNumber, String NameCard, LocalDate dateexp, int cvc, String Label) {
+    public static void Add(String CardNumber, String NameCard, LocalDate dateexp, int cvc, String Label) {
 
         try {
 
@@ -18,12 +18,18 @@ public class CardPaymentDB {
             Statement st;
             st = (Statement) ((java.sql.Connection) con).createStatement();
             ResultSet rs = st.executeQuery("select * from CardPayment where CardNumber = '" + CardNumber + "'");
-            if (CardNumber == 0 || NameCard.isEmpty() || dateexp == null || cvc == 0 || Label.isEmpty()) {
+            if (CardNumber.isEmpty() || NameCard.isEmpty() || dateexp == null || cvc == 0 || Label.isEmpty()) {
 
                 System.out.println("Fields empty");
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Please fill all fields");
                 alert.show();
+            }else if(CardNumber.length()==16){
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setContentText("Please Make sure You have inserted all 16 digits of your card");
+                    alert.show();
+
+
 
             } else {
 

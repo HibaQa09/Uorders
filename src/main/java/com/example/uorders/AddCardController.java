@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -15,6 +16,7 @@ import javafx.stage.Stage;
 import com.example.models.CardPaymentModel;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Date;
 
 import com.example.models.CardPaymentModel;
 
@@ -45,7 +47,7 @@ public class AddCardController {
         private TextField cVc;
 
         @FXML
-        private TextField expDate;
+        private DatePicker datepicker;
 
         @FXML
         private TextField labelCard;
@@ -55,8 +57,8 @@ public class AddCardController {
 
             CardPaymentModel Card = new CardPaymentModel();
             Card.setName(NameCard.getText());
-            Card.setCardNumber(Integer.parseInt(CardNumber.getText()));
-            Card.setExpDate(LocalDate.parse(expDate.getText()));
+            Card.setCardNumber(CardNumber.getText());
+            Card.setExpDate(datepicker.getValue());
             Card.setCvc(Integer.parseInt(cVc.getText()));
             Card.setLabel(labelCard.getText());
 
