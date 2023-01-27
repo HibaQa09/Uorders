@@ -6,11 +6,13 @@ import com.example.models.registerModel;
 import com.example.uorders.RegisterController;
 
 import java.sql.*;
+import com.example.uorders.RegisterController;
 
 
 public class RegisterDB {
 
-    public static void SignUp(int Id, String FirstName, String LastName, String Email, String Mdp, String CMdp ){
+
+    public static boolean SignUp(int Id, String FirstName, String LastName, String Email, String Mdp, String CMdp ){
 
         try {
 
@@ -24,6 +26,7 @@ public class RegisterDB {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setContentText("Please fill all fields");
                 alert.show();
+                return false;
 
             }else{
 
@@ -32,6 +35,7 @@ public class RegisterDB {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setContentText("Email already in use");
                     alert.show();
+                    return false;
 
                 }else{
 
@@ -40,17 +44,31 @@ public class RegisterDB {
                         Alert alert = new Alert(Alert.AlertType.ERROR);
                         alert.setContentText("Please make sure your passwords match");
                         alert.show();
+                        return false;
 
-                    }else{
-                        String sql = ("INSERT INTO customer VALUES('"+Id+"','"+FirstName+"','"+LastName+"','"+Email+"','"+Mdp+"')");
-                        st.executeUpdate(sql);
-                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                        alert.setContentText("Registration complete");
-                        alert.show();
+                    }else {
+
+                        if (Mdp.length() > 8) {
+
+                            String sql = ("INSERT INTO customer VALUES('" + Id + "','" + FirstName + "','" + LastName + "','" + Email + "','" + Mdp + "')");
+                            st.executeUpdate(sql);
+                            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                            alert.setContentText("Registration complete");
+                            alert.show();
+                            return true;
+
+                        } else {
+
+                            Alert alert = new Alert(Alert.AlertType.ERROR);
+                            alert.setContentText("Please make sure your passwords is strong enough");
+                            alert.show();
+                            return false;
+
+                        }
+
                     }
-
-
                 }
+
             }
 
 
@@ -58,6 +76,7 @@ public class RegisterDB {
             e1.printStackTrace();
         }
 
+        return false;
     }
 
 }

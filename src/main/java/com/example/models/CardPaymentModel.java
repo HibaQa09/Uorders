@@ -8,7 +8,7 @@ public class CardPaymentModel {
   private String name;
     private  String CardNumber;
     private LocalDate ExpDate;
-    private  int Cvc;
+    private  String Cvc;
     private  String Label;
     public CardPaymentModel(){
         super();
@@ -32,11 +32,11 @@ public class CardPaymentModel {
         ExpDate = expDate;
     }
 
-    public int getCvc() {
+    public String getCvc() {
         return Cvc;
     }
 
-    public void setCvc(int cvc) {
+    public void setCvc(String cvc) {
         Cvc = cvc;
     }
 

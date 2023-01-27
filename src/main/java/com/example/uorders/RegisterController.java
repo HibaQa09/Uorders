@@ -1,5 +1,6 @@
 package com.example.uorders;
 
+import com.example.Database.RegisterDB;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -16,8 +17,8 @@ import javafx.stage.Stage;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import com.example.models.registerModel;
-
 import static com.example.Database.RegisterDB.SignUp;
+
 
 public class RegisterController {
 
@@ -53,6 +54,7 @@ public class RegisterController {
     private Button RegisterButton;
 
     private registerModel user;
+    private boolean test;
 
 
 
@@ -67,19 +69,37 @@ public class RegisterController {
 
     public void register(javafx.event.ActionEvent event) throws IOException {
 
-        user = new registerModel();
-        user.setFirstName( FirstName.getText());
-        user.setLastName( LastName.getText() );
-        user.setEmail( Email.getText() );
-        user.setPasswrd( Mdp.getText() );
-        user.setPasswrdConfirmation( CMdp.getText() );
+        boolean x;
+        do {
 
-        SignUp (user.getId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPasswrd(), user.getPasswrdConfirmation());
+            user = new registerModel();
+            user.setFirstName( FirstName.getText());
+            user.setLastName( LastName.getText() );
+            user.setEmail( Email.getText() );
+            user.setPasswrd( Mdp.getText() );
+            user.setPasswrdConfirmation( CMdp.getText() );
+
+            x = SignUp(user.getId(), user.getFirstName(), user.getLastName(), user.getEmail(), user.getPasswrd(), user.getPasswrdConfirmation());
+
+            if (x){
+                break;
+            }
+
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            fxml = FXMLLoader.load(getClass().getResource("View/register.fxml"));
+            Scene scene = new Scene(fxml);
+            stage.setScene(scene);
+            stage.show();
+
+        } while (!x);
+
+
         Panel.getScene().getWindow().hide();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/CardPayment.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/Login.fxml"));
         Scene scene = new Scene(fxml);
         stage.setScene(scene);
         stage.show();
+
     }
 }

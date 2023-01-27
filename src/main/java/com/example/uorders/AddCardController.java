@@ -53,16 +53,24 @@ public class AddCardController {
         private TextField labelCard;
 
         @FXML
-        void Addcard(ActionEvent event) {
+        void Addcard(javafx.event.ActionEvent event) throws IOException {
 
             CardPaymentModel Card = new CardPaymentModel();
             Card.setName(NameCard.getText());
             Card.setCardNumber(CardNumber.getText());
             Card.setExpDate(datepicker.getValue());
-            Card.setCvc(Integer.parseInt(cVc.getText()));
+            Card.setCvc(cVc.getText());
             Card.setLabel(labelCard.getText());
 
             Add(  Card.getCardNumber(),  Card.getName(),  Card.getExpDate(), Card.getCvc(),  Card.getLabel());
+
+
+            Panel1.getScene().getWindow().hide();
+            Stage stage1 = new Stage();
+            fxml = FXMLLoader.load(getClass().getResource("View/YourOrder.fxml"));
+            Scene scene = new Scene(fxml);
+            stage1.setScene(scene);
+            stage1.show();
         }
             @FXML
         void back(MouseEvent event) throws IOException {
