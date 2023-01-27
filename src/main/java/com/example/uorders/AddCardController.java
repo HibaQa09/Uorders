@@ -57,7 +57,7 @@ public class AddCardController {
 
             CardPaymentModel Card = new CardPaymentModel();
             Card.setName(NameCard.getText());
-            Card.setCardNumber(Integer.parseInt(CardNumber.getText()));
+            Card.setCardNumber(CardNumber.getText());
             Card.setExpDate(datepicker.getValue());
             Card.setCvc(Integer.parseInt(cVc.getText()));
             Card.setLabel(labelCard.getText());

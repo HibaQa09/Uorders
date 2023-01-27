@@ -6,7 +6,7 @@ public class CardPaymentModel {
 
 
   private String name;
-    private  int CardNumber;
+    private  String CardNumber;
     private LocalDate ExpDate;
     private  int Cvc;
     private  String Label;
@@ -16,11 +16,11 @@ public class CardPaymentModel {
 
 
 
-    public int getCardNumber() {
+    public String getCardNumber() {
         return CardNumber;
     }
 
-    public void setCardNumber(int cardNumber) {
+    public void setCardNumber(String cardNumber) {
         CardNumber = cardNumber;
     }
 
