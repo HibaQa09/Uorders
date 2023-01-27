@@ -70,7 +70,7 @@ public class SidebarController {
     void Return(MouseEvent event) throws IOException {
         Panel0.getScene().getWindow().hide();
         stage1 = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/MenuView.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/Menutest.fxml"));
         Scene scene = new Scene(fxml);
         stage1.setScene(scene);
         stage1.show();
