@@ -205,7 +205,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Changepswd {
+public class changePswrdController {
 
     @FXML
     private Button Done;
