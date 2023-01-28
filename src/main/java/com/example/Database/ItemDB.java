@@ -32,10 +32,10 @@ public class ItemDB {
 
                 item = new Item();
 
-                item.setNameItem(rs.getString(                          2));
+                item.setNameItem(rs.getString(2));
                 item.setPriceItem(rs.getInt(3));
                 item.setImgItem(rs.getString(4));
-                item.setDetailsItem(rs.getString(5));
+                item.setDetailsItem(rs.getString(6));
 
                 String name = rs.getString(2);
                 System.out.println("name:" +name);

@@ -95,7 +95,8 @@ public class MenuCatController {
             stage1.show();
 
 
-        }}
+        }
+    }
 
 
 }
