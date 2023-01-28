@@ -48,7 +48,7 @@ public class RegisterDB {
 
                     }else {
 
-                        if (Mdp.length() > 8) {
+                        if (Mdp.length() > 1) {
 
                             String sql = ("INSERT INTO customer VALUES('" + Id + "','" + FirstName + "','" + LastName + "','" + Email + "','" + Mdp + "')");
                             st.executeUpdate(sql);

@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Myinfo {
+public class myInfoController {
 
     @FXML
     private ImageView MyPanel;
