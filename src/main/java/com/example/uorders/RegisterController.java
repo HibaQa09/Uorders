@@ -54,7 +54,7 @@ public class RegisterController {
     private Button RegisterButton;
 
     private registerModel user;
-    private boolean test;
+
 
 
 
@@ -94,7 +94,7 @@ public class RegisterController {
         } while (!x);
 
 
-        Panel.getScene().getWindow().hide();
+        MyPanel.getScene().getWindow().hide();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         fxml = FXMLLoader.load(getClass().getResource("View/Login.fxml"));
         Scene scene = new Scene(fxml);
