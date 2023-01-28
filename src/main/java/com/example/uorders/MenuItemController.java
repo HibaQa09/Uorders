@@ -6,6 +6,7 @@ import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -20,6 +21,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 //import java.awt.event.ActionEvent;
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -143,13 +145,13 @@ public class MenuItemController implements Initializable {
                 item.setNameItem(rs.getString(2));
                 item.setPriceItem(rs.getInt(3));
                 item.setImgItem(rs.getString(4));
-                item.setDetailsItem(rs.getString(5));
+                item.setDetailsItem(rs.getString(6));
 
                 String name = rs.getString(2);
                 System.out.println("name:" +name);
                 int p  = rs.getInt(3);
                 System.out.println("price:" +p);
-                String det =  rs.getString(5);
+                String det =  rs.getString(6);
                 System.out.println("details:" +det);
 
                 items.add(item);
@@ -192,6 +194,8 @@ public class MenuItemController implements Initializable {
                     row++;
                 }
                 gridpane.add(anchorPane, column++, row);
+                //GridPane.setMargin(anchorPane,new Insets(0,5,0,5));
+
             }
 
         } catch (IOException e) {
