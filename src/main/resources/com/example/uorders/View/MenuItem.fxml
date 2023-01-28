@@ -48,21 +48,48 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button mnemonicParsing="false" text="Button">
+            <Button fx:id="choose1" layoutX="35.0" layoutY="206.0" mnemonicParsing="false" onAction="#chooseItem" prefHeight="31.0" prefWidth="75.0" text="+">
+               <font>
+                  <Font size="15.0" />
+               </font>
                <GridPane.margin>
-                  <Insets bottom="-100.0" />
+                  <Insets bottom="-190.0" left="230.0" />
                </GridPane.margin>
+            </Button>
+            <Button fx:id="choose2" layoutX="70.0" layoutY="211.0" mnemonicParsing="false" onAction="#chooseItem" prefHeight="19.0" prefWidth="16.0" text="+">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-655.0" left="60.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="choose3" layoutX="70.0" layoutY="439.0" mnemonicParsing="false" onAction="#chooseItem" prefHeight="19.0" prefWidth="16.0" text="+">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="-655.0" left="230.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="choose" mnemonicParsing="false" onAction="#chooseItem" prefHeight="24.0" prefWidth="30.0" text="+">
+               <GridPane.margin>
+                  <Insets bottom="-190.0" left="60.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
             </Button>
          </children>
       </GridPane>
       <AnchorPane fx:id="ItemPane" layoutX="9.0" layoutY="495.0" prefHeight="105.0" prefWidth="318.0" style="-fx-background-color: #262626; -fx-background-radius: 15;" visible="false">
          <children>
-            <ImageView fx:id="Img" fitHeight="70.0" fitWidth="85.0" layoutX="14.0" layoutY="-7.0">
+            <ImageView fx:id="Img" fitHeight="70.0" fitWidth="85.0" layoutX="11.0" layoutY="-7.0">
                <image>
                   <Image url="@../Assets/pasta.png" />
                </image>
             </ImageView>
-            <Label fx:id="label" layoutX="110.0" layoutY="13.0" prefHeight="30.0" prefWidth="155.0" text="pasta carbonara " textFill="WHITE">
+            <Label fx:id="label" layoutX="105.0" layoutY="13.0" prefHeight="30.0" prefWidth="155.0" text="pasta carbonara " textFill="WHITE">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
