@@ -14,6 +14,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -284,7 +286,7 @@ public class MenuItemController implements Initializable {
             if (clickedButton.getId().equals("1")) {
 
                 label.setText(items.get(0).getNameItem());
-                priceItem = Double.parseDouble(items.get(0).getNameItem());
+                priceItem = items.get(0).getPriceItem();
                 String path = items.get(0).getImgItem();
                 File file = new File(path);
                 String localUrl = file.toURI().toURL().toString();
@@ -292,6 +294,12 @@ public class MenuItemController implements Initializable {
                 Img.setImage(thumbnail);
 
                 while (chosenItem == 0) {
+
+                    DropShadow dropShadow = new DropShadow();
+                   // dropShadow.setColor(Color.ORANGE);
+
+                    GaussianBlur blur = new GaussianBlur(5);
+                    gridpane.setEffect(blur);
 
                     TranslateTransition translate = new TranslateTransition();
                     translate.setNode(ItemPane);
@@ -305,7 +313,7 @@ public class MenuItemController implements Initializable {
 
             } else if (clickedButton.getId().equals("2")) {
                 label.setText(items.get(1).getNameItem());
-                priceItem = Double.parseDouble(items.get(1).getNameItem());
+                priceItem = items.get(1).getPriceItem();
                 String path = items.get(1).getImgItem();
                 File file = new File(path);
                 String localUrl = file.toURI().toURL().toString();
@@ -313,6 +321,11 @@ public class MenuItemController implements Initializable {
                 Img.setImage(thumbnail);
 
                 while (chosenItem == 0) {
+                    DropShadow dropShadow = new DropShadow();
+                    //dropShadow.setColor(Color.ORANGE);
+
+                    GaussianBlur blur = new GaussianBlur(5);
+                    gridpane.setEffect(blur);
 
                     TranslateTransition translate = new TranslateTransition();
                     translate.setNode(ItemPane);
@@ -325,7 +338,7 @@ public class MenuItemController implements Initializable {
 
             } else if (clickedButton.getId().equals("3")) {
                 label.setText(items.get(2).getNameItem());
-                priceItem = Double.parseDouble(items.get(2).getNameItem());
+                priceItem = items.get(2).getPriceItem();
                 String path = items.get(2).getImgItem();
                 File file = new File(path);
                 String localUrl = file.toURI().toURL().toString();
@@ -333,6 +346,12 @@ public class MenuItemController implements Initializable {
                 Img.setImage(thumbnail);
 
                 while (chosenItem == 0) {
+
+                    DropShadow dropShadow = new DropShadow();
+                    //dropShadow.setColor(Color.ORANGE);
+
+                    GaussianBlur blur = new GaussianBlur(5);
+                    gridpane.setEffect(blur);
 
                     TranslateTransition translate = new TranslateTransition();
                     translate.setNode(ItemPane);
@@ -345,7 +364,7 @@ public class MenuItemController implements Initializable {
 
             } else if (clickedButton.getId().equals("4")) {
                 label.setText(items.get(3).getNameItem());
-                priceItem = Double.parseDouble(items.get(3).getNameItem());
+                priceItem = items.get(3).getPriceItem();
                 String path = items.get(3).getImgItem();
                 File file = new File(path);
                 String localUrl = file.toURI().toURL().toString();
@@ -353,6 +372,12 @@ public class MenuItemController implements Initializable {
                 Img.setImage(thumbnail);
 
                 while (chosenItem == 0) {
+
+                    DropShadow dropShadow = new DropShadow();
+                    //dropShadow.setColor(Color.ORANGE);
+
+                    GaussianBlur blur = new GaussianBlur(5);
+                    gridpane.setEffect(blur);
 
                     TranslateTransition translate = new TranslateTransition();
                     translate.setNode(ItemPane);
