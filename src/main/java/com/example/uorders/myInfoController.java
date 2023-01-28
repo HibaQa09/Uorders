@@ -1,5 +1,7 @@
 package com.example.uorders;
 
+import com.example.Database.loginDB;
+import com.example.models.MyinfoModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +14,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
+
+import static com.example.Database.myInfoDB.Display;
 
 public class myInfoController {
 
@@ -39,6 +44,8 @@ public class myInfoController {
 
     @FXML
     private Button paymentM;
+    private static MyinfoModel user;
+
 
     @FXML
     void changep(MouseEvent event) throws IOException {
@@ -53,6 +60,7 @@ public class myInfoController {
 
     @FXML
     void paymentm(MouseEvent event) throws IOException {
+
         MyPanel.getScene().getWindow().hide();
         Stage stage1 = new Stage();
         fxml = FXMLLoader.load(getClass().getResource("View/CardPayment.fxml"));
@@ -61,5 +69,18 @@ public class myInfoController {
         stage1.show();
 
     }
+
+    @FXML
+    void display() throws SQLException {
+
+        user = new MyinfoModel();
+        Display(loginDB.mail , user.getName());
+        System.out.println(loginDB.mail);
+        System.out.println(user.getName());
+        email.setText("loginDB.mail");
+        //name.setText((user.getName()));
+
+    }
+
 
 }

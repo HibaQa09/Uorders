@@ -10,14 +10,14 @@
 
 <AnchorPane prefHeight="630.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uorders.myInfoController">
    <children>
-      <ImageView fx:id="MyPanel" fitHeight="681.0" fitWidth="363.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="image" fitHeight="681.0" fitWidth="363.0" layoutY="-19.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../../../../Desktop/qtis6.png" />
+            <Image url="@../Assets/qtis6.png" />
          </image>
       </ImageView>
-      <TextField fx:id="name" layoutX="74.0" layoutY="163.0" opacity="0.32" prefHeight="33.0" prefWidth="222.0" text="ilias manadir" />
-      <TextField fx:id="email" layoutX="74.0" layoutY="300.0" opacity="0.32" prefHeight="31.0" prefWidth="222.0" text="iliasmanadir@yahoo.fr" />
-      <TextField fx:id="idcard" layoutX="74.0" layoutY="231.0" opacity="0.32" prefHeight="31.0" prefWidth="222.0" text="2000132">
+      <TextField fx:id="name" disable="true" editable="false" layoutX="74.0" layoutY="163.0" opacity="0.32" prefHeight="33.0" prefWidth="222.0" />
+      <TextField fx:id="email" disable="true" editable="false" layoutX="74.0" layoutY="300.0" opacity="0.32" prefHeight="31.0" prefWidth="222.0" />
+      <TextField fx:id="idcard" disable="true" editable="false" layoutX="74.0" layoutY="231.0" opacity="0.32" prefHeight="31.0" prefWidth="222.0">
          <font>
             <Font name="Arial" size="13.0" />
          </font>

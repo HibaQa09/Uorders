@@ -17,6 +17,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import static com.example.Database.loginDB.loginApp;
 
@@ -47,6 +48,7 @@ public class loginController {
     private Text label_login;
 
     private loginModel user;
+    private myInfoController ue;
     private Parent fxml;
 
     private Stage stage;
@@ -62,6 +64,7 @@ public class loginController {
         do{
 
             user = new loginModel();
+            ue = new myInfoController();
             user.setEmail(Email.getText());
             user.setPasswrd(Password.getText());
 
@@ -81,10 +84,15 @@ public class loginController {
 
         MyPanel.getScene().getWindow().hide();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/register.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/Myinfo.fxml"));
         Scene scene = new Scene(fxml);
         stage.setScene(scene);
         stage.show();
+        try {
+            ue.display();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 
