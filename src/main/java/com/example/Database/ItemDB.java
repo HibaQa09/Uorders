@@ -1,5 +1,6 @@
 package com.example.Database;
 import com.example.models.Item;
+import com.example.uorders.MenuItemController;
 
 import java.sql.*;
 
@@ -34,7 +35,7 @@ public class ItemDB {
                 item.setNameItem(rs.getString(                          2));
                 item.setPriceItem(rs.getInt(3));
                 item.setImgItem(rs.getString(4));
-                item.setDetailsItem(rs.getString(6));
+                item.setDetailsItem(rs.getString(5));
 
                 String name = rs.getString(2);
                 System.out.println("name:" +name);

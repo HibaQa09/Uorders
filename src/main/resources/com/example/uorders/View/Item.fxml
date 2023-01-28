@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="Item" prefHeight="10.0" prefWidth="80.0" style="-fx-background-color: #262626; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uorders.ItemController">
+<AnchorPane fx:id="Item" onMouseClicked="#chooseItem" prefHeight="7.0" prefWidth="60.0" style="-fx-background-color: #262626; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.uorders.ItemController">
    <children>
       <ImageView fx:id="imgItem" fitHeight="107.0" fitWidth="163.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>

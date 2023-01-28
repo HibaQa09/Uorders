@@ -1,11 +1,18 @@
 package com.example.uorders;
 
 import com.example.models.Item;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.util.Duration;
+
 import java.io.File;
 import java.net.MalformedURLException;
 
@@ -27,8 +34,14 @@ public class ItemController {
     @FXML
     private Text priceItem;
 
+    private static int chosenItem =0;
+
+    MenuItemController item1;
+
 
         private Item item;
+
+
 
         public void setData(Item item) throws MalformedURLException {
             this.item = item;
@@ -43,6 +56,25 @@ public class ItemController {
             imgItem.setImage(thumbnail);
 
         }
+
+    public void chooseItem(MouseEvent mouseEvent) {
+        /*while(chosenItem==0){
+            DropShadow dropShadow = new DropShadow();
+            dropShadow.setColor(Color.ORANGE);
+
+            GaussianBlur blur = new GaussianBlur(5);
+            MenuItemController.gridpane.setEffect(blur);
+
+            TranslateTransition translate = new TranslateTransition();
+            translate.setNode(MenuItemController.ItemPane);
+            MenuItemController.ItemPane.setVisible(true);
+            MenuItemController.ItemPane.setEffect(dropShadow);
+            translate.setDuration(Duration.millis(1000));
+            translate.setByY(-10);
+            translate.play();
+            chosenItem++;
+        };*/
     }
+}
 
 

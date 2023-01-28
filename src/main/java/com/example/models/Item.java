@@ -1,5 +1,6 @@
 package com.example.models;
 
+import com.example.uorders.MenuItemController;
 import javafx.scene.control.Button;
 
 public class Item {
@@ -40,8 +41,6 @@ public class Item {
     public void setDetailsItem(String detailsItem) {
         this.detailsItem = detailsItem;
     }
-
-
 
 
 

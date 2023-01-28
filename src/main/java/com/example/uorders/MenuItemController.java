@@ -13,10 +13,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.GaussianBlur;
+import javafx.scene.effect.Shadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -31,6 +35,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import static com.example.Database.ItemDB.getData;
 
 public class MenuItemController implements Initializable {
 
@@ -101,10 +107,16 @@ public class MenuItemController implements Initializable {
         itemMenu.setScene(scene);
         itemMenu.show();*/
         while(chosenItem==0){
+            DropShadow dropShadow = new DropShadow();
+            dropShadow.setColor(Color.ORANGE);
+
+            GaussianBlur blur = new GaussianBlur(5);
+            gridpane.setEffect(blur);
 
             TranslateTransition translate = new TranslateTransition();
             translate.setNode(ItemPane);
             ItemPane.setVisible(true);
+            ItemPane.setEffect(dropShadow);
             translate.setDuration(Duration.millis(1000));
             translate.setByY(-10);
             translate.play();
@@ -122,7 +134,7 @@ public class MenuItemController implements Initializable {
         itemMenu.show();
     }
 
-    private List<Item> getData(){
+   /* private List<Item> getData(){
         int haha =MenuCatController.ChosenId ;
         System.out.println(" yarbiii tkhdem  ezbfguzegfyuezgf" +haha);
 
@@ -145,7 +157,7 @@ public class MenuItemController implements Initializable {
                 item.setNameItem(rs.getString(2));
                 item.setPriceItem(rs.getInt(3));
                 item.setImgItem(rs.getString(4));
-                item.setDetailsItem(rs.getString(6));
+                item.setDetailsItem(rs.getString(5));
 
                 String name = rs.getString(2);
                 System.out.println("name:" +name);
@@ -166,7 +178,7 @@ public class MenuItemController implements Initializable {
         }
 
         return items;
-    }
+    }*/
 
 
 
