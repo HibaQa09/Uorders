@@ -277,7 +277,7 @@ public class MenuItemController implements Initializable {
         System.out.println(orders.get(0).getQuantity()+"digzefuygezygfuyzegfuyezgfuyzeuyuezgfuezfuy");
 
         a++;
-        //NbrCart.setText(String.valueOf(a));
+        NbrCart.setText(String.valueOf(a));
 
 
     }
