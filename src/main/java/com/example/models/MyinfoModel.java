@@ -6,6 +6,8 @@ public class MyinfoModel {
 
     private Double idcard;
 
+    private String Email;
+
 
     public Double getIdcard() {
         return idcard;
@@ -21,5 +23,13 @@ public class MyinfoModel {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getEmail() {
+        return Email;
     }
 }

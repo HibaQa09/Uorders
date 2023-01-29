@@ -1,6 +1,7 @@
 package com.example.uorders;
 
 import com.example.Database.RegisterDB;
+import com.example.models.MyinfoModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -16,6 +17,8 @@ import javafx.stage.Stage;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.sql.SQLException;
+
 import com.example.models.registerModel;
 import static com.example.Database.RegisterDB.SignUp;
 
@@ -56,8 +59,6 @@ public class RegisterController {
     private registerModel user;
 
 
-
-
     public void back(MouseEvent mouseEvent) throws IOException {
         Panel.getScene().getWindow().hide();
         stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
@@ -67,7 +68,7 @@ public class RegisterController {
         stage.show();
     }
 
-    public void register(javafx.event.ActionEvent event) throws IOException {
+    public void register(javafx.event.ActionEvent event) throws IOException, SQLException {
 
         boolean x;
         do {
@@ -100,6 +101,7 @@ public class RegisterController {
         Scene scene = new Scene(fxml);
         stage.setScene(scene);
         stage.show();
+
 
     }
 }
