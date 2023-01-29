@@ -260,6 +260,17 @@ ALTER TABLE `Staff`
   ADD CONSTRAINT `Test` FOREIGN KEY (`Order_Id`) REFERENCES `Order` (`Id_order`);
 COMMIT;
 
+-- Table structure for table `CardPayment`
+--
+
+CREATE TABLE `CardPayment` (
+  `CardNumber` int(16) NOT NULL,
+  `NameCard` varchar(100) NOT NULL,
+  `expDate` date NOT NULL,
+  `cvc` int(3) NOT NULL,
+  `Label` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
