@@ -36,11 +36,7 @@ public class ItemController {
 
     private static int chosenItem =0;
 
-    MenuItemController item1;
-
-
-        private Item item;
-
+    private Item item;
 
 
         public void setData(Item item) throws MalformedURLException {
@@ -58,22 +54,7 @@ public class ItemController {
         }
 
     public void chooseItem(MouseEvent mouseEvent) {
-        /*while(chosenItem==0){
-            DropShadow dropShadow = new DropShadow();
-            dropShadow.setColor(Color.ORANGE);
 
-            GaussianBlur blur = new GaussianBlur(5);
-            MenuItemController.gridpane.setEffect(blur);
-
-            TranslateTransition translate = new TranslateTransition();
-            translate.setNode(MenuItemController.ItemPane);
-            MenuItemController.ItemPane.setVisible(true);
-            MenuItemController.ItemPane.setEffect(dropShadow);
-            translate.setDuration(Duration.millis(1000));
-            translate.setByY(-10);
-            translate.play();
-            chosenItem++;
-        };*/
     }
 }
 

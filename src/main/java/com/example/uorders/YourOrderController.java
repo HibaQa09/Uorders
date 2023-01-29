@@ -1,22 +1,26 @@
 package com.example.uorders;
 
+import com.example.models.FinalOrder;
+import com.example.models.Item;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ResourceBundle;
 
+import static com.example.Database.ItemDB.getData;
 
 
 public class YourOrderController {
@@ -40,6 +44,14 @@ public class YourOrderController {
 
     @FXML
     private TextField CommentsArea;
+
+    @FXML
+    private AnchorPane anchorOrder;
+
+    @FXML
+    private Label MenuItemLabel;
+
+    private List<FinalOrder> orders = new ArrayList();
 
     @FXML
     void back(MouseEvent event) throws IOException {
@@ -89,7 +101,46 @@ public class YourOrderController {
         CommentsArea.setVisible(true);
         String comnt = CommentsArea.getText();
 
+    }
+
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+       // orders.addAll(getOrders());
+
+        System.out.println("ggg" + orders.size());
+
+        int column = 0;
+        int row = 0;
+
+        try {
+            for (int i = 0; i <= orders.size(); i++) {
+
+                FXMLLoader fxml = new FXMLLoader(getClass().getResource("View/Item.fxml"));
+                Parent root = (Parent) fxml.load();
+                AnchorPane anchorPane = new AnchorPane(root);
+                anchorPane.setFocusTraversable(true);
+                anchorPane.setPickOnBounds(false);
+                ItemController itemController = fxml.getController();
+                //itemController.setData(items.get(i));
+
+
+                if (column == 1) {
+                    column = 0;
+                    row++;
+                }
+             /*   gridpane.add(anchorPane, column++, row);
+                gridpane.setPickOnBounds(true);*/
+                //GridPane.setMargin(anchorPane,new Insets(0,5,0,5));
+
+            }
+
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
+
+
 
 }

@@ -33,4 +33,8 @@ public class FinalOrder {
         this.price = price;
     }
 
+    public void getOrders(){
+
+    }
+
 }
