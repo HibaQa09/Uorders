@@ -20,22 +20,25 @@ Presentation of our app
 
 4.Menu: The user can select from the menu category what they would like to order
 
+![image](https://user-images.githubusercontent.com/98495712/215358416-80a9f05a-aa12-4d07-8b3a-434a28251a09.png)
 
 
 
-
-5.Menu item : Every menu category has it own meals where the user can chose from
+5.Menu item : Every menu category has it own meals where the user can chose from 
+![image](https://user-images.githubusercontent.com/98495712/215358433-64ce8c87-bf44-4545-b3d5-623a52a0265f.png)
 
 
 
 6.Adding meals to order : The user can use the quantity of their order 
 
+![image](https://user-images.githubusercontent.com/98495712/215358446-898b376c-c72b-4224-8d8f-9f2fd804910a.png)
 
 
 
 
 7.The chart:The user is redirected to the chart so they can confirm their order and to choose the payement method
 
+![image](https://user-images.githubusercontent.com/98495712/215358657-58457e57-551b-4fa3-9b1f-d0d61a06b06e.png)
 
 
 8.Add Credit Card: The user can add a credit card to use in further purchases 
