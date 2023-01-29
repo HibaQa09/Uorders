@@ -48,6 +48,15 @@ public class AddCardController {
         private TextField labelCard;
 
         @FXML
+        /**
+
+         This method is used to add a card payment to the system.
+         It takes in an ActionEvent as a parameter and throws an IOException.
+         The method first creates a new CardPaymentModel object and sets its properties
+         using the values entered by the user in the corresponding text fields.
+         Then it calls the Add() method, passing in the card details as parameters.
+         Next, the current window is closed and a new window is opened, displaying the YourOrder view.
+         */
         void Addcard(javafx.event.ActionEvent event) throws IOException {
 
             CardPaymentModel Card = new CardPaymentModel();

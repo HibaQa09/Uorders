@@ -9,7 +9,15 @@ import java.sql.Statement;
 
 public class myInfoDB {
 
+
     public static MyinfoModel user;
+
+    /**
+     * This code helps to display the information of the user in the UNenabled TextField
+     * @param Email
+     * @param Name
+     * @throws SQLException
+     */
     public static void Display(String Email, String Name ) throws SQLException {
 
         try {

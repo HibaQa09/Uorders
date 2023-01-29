@@ -21,6 +21,8 @@ import java.sql.SQLException;
 
 import static com.example.Database.loginDB.loginApp;
 
+//import static com.example.Database.loginDB.loginApp;
+
 public class loginController {
 
     @FXML
@@ -58,6 +60,7 @@ public class loginController {
     }
 
     @FXML
+
     void log(ActionEvent event) throws IOException {
         boolean x;
 
@@ -71,6 +74,7 @@ public class loginController {
             x = loginApp(user.getEmail(), user.getPasswrd());
 
             if(x) {
+
                 break;
             }
 

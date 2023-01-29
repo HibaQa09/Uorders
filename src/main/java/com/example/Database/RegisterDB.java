@@ -10,6 +10,18 @@ import com.example.uorders.RegisterController;
 
 
 public class RegisterDB {
+    /**
+
+
+    * The SignUp method is used to register a new user in the system by taking in several parameters and checking them against the database.
+     * @param Id The unique identifier for the user
+     * @param FirstName The first name of the user
+     * @param LastName The last name of the user
+     * @param Email The email address of the user
+    *  @param Mdp The password entered by the user
+     * @param CMdp The confirmation password entered by the user
+    *  @return boolean Returns true if registration is successful, false otherwise
+     */
 
 
     public static boolean SignUp(int Id, String FirstName, String LastName, String Email, String Mdp, String CMdp ){

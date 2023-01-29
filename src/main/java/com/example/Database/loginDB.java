@@ -11,8 +11,14 @@ import com.example.models.*;
 
 public class loginDB {
 
+
     private static MyinfoModel user;
     public static String mail;
+    /**
+     * login to the app checks if the user is in the database then  it leads them to the first page of the app
+     * @param Email
+     * @param Password
+     */
 
     public static boolean loginApp(String Email, String Password){
 

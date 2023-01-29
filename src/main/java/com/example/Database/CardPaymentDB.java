@@ -9,6 +9,16 @@ import java.sql.Statement;
 import java.time.LocalDate;
 
 public class CardPaymentDB {
+    /**
+
+    * The Add method is used to add a new credit/debit card to the system by taking in several parameters and checking them against the database.
+     *@param CardNumber The unique number of the card
+     *@param NameCard The name of the card holder
+     *@param dateexp The expiration date of the card
+     *@param cvc The card's CVC/CVV code
+     *@param Label A label to identify the card
+     *@return void
+     */
     public static void Add(String CardNumber, String NameCard, LocalDate dateexp, String cvc, String Label) {
 
         try {
@@ -24,14 +34,19 @@ public class CardPaymentDB {
                 alert.setContentText("Please fill all fields");
                 alert.show();
 
-            }else {
+            } else if (CardNumber.length() != 16) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Please Make sure You have inserted all 16 digits of your card");
+                alert.show();
 
-                if(CardNumber.length()!=16){
+
+            } else {
+                if (cvc.length() != 3) {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setContentText("Please Make sure You have inserted all 16 digits of your card");
                     alert.show();
+                } else {
 
-                }else {
 
                     if (rs.next() && rs.getInt(1) > 0) {
 
@@ -39,7 +54,7 @@ public class CardPaymentDB {
                         alert.setContentText("Card already in use");
                         alert.show();
 
-                    }else {
+                    } else {
                         String sql = ("INSERT INTO CardPayment VALUES('" + CardNumber + "','" + NameCard + "','" + dateexp + "','" + cvc + "','" + Label + "')");
                         st.executeUpdate(sql);
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -49,14 +64,13 @@ public class CardPaymentDB {
 
                     }
                 }
+
             }
 
 
-        } catch (SQLException e1) {
-            e1.printStackTrace();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
-
-
     }
 }
 
