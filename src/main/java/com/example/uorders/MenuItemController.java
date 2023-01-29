@@ -2,6 +2,8 @@ package com.example.uorders;
 import com.example.Database.ConnectionDB;
 import com.example.Database.ConnectionDB;
 import com.example.models.Item;
+import javafx.animation.Interpolator;
+import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,6 +23,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -52,6 +55,9 @@ public class MenuItemController implements Initializable {
 
     @FXML
     private GridPane gridpane;
+    @FXML
+    private Label NbrCart;
+    private int a=0;
 
     @FXML
     private ScrollPane scrollpane;
@@ -101,15 +107,19 @@ public class MenuItemController implements Initializable {
     @FXML
     private Button choose3;
 
+    private Double t;
 
-    private int nbr;
-    /* private List<OrderItemModel> orders = new ArrayList<>();
-     private OrderItemModel order;*/
-    private Double Tot = 45.0;
+
+    private int nbr =1;
+    private List<Item> orders = new ArrayList<>();
+     private Item order;
 
     private static int chosenItem = 0;
 
+    int Id_Push;
+
     double priceItem;
+    TranslateTransition translate = new TranslateTransition();
 
 
     @FXML
@@ -118,21 +128,10 @@ public class MenuItemController implements Initializable {
 
         Menu.getScene().getWindow().hide();
         itemMenu = (Stage)((Node)event.getSource()).getScene().getWindow();
-        fxml = FXMLLoader.load(getClass().getResource("View/MenuView.fxml"));
+        fxml = FXMLLoader.load(getClass().getResource("View/Menutest.fxml"));
         Scene scene = new Scene(fxml);
         itemMenu.setScene(scene);
         itemMenu.show();
-       /* while (chosenItem == 0) {
-
-            TranslateTransition translate = new TranslateTransition();
-            translate.setNode(ItemPane);
-            ItemPane.setVisible(true);
-            translate.setDuration(Duration.millis(1000));
-            translate.setByY(-10);
-            translate.play();
-            chosenItem++;
-        }*/
-        ;
     }
 
 
@@ -252,7 +251,10 @@ public class MenuItemController implements Initializable {
         }
         NbrItems.setText(String.valueOf(nbr));
         System.out.println(Total.getText());
-        Total.setText("Total : " + Tot * nbr + "DHs");
+        t =priceItem*nbr;
+        System.out.println("yeeeeeeeeeeeeeeeeeeeeeeeeeeeees"+nbr);
+        Total.setText("Total : "+t+" DHs");
+
     }
 
     public void Increase(javafx.event.ActionEvent actionEvent) {
@@ -260,133 +262,119 @@ public class MenuItemController implements Initializable {
         nbr = Integer.parseInt(NbrItems.getText());
         nbr++;
         NbrItems.setText(String.valueOf(nbr));
-        Total.setText("Total : " + Tot * nbr + "DHs");
+        System.out.println("essaaaaaiiii"+nbr);
+        t =priceItem*nbr;
+        System.out.println("yeeeeeeeeeeeeeeeeeeeeeeeeeeeees"+nbr);
+        Total.setText("Total : "+t+" DHs");
 
     }
 
     public void AddToCart(javafx.event.ActionEvent actionEvent) {
-         /*ChosenItem = new ChosenItem();
-        ChosenItem.setId_item(1);
-        ChosenItem.setQuantity(10);
-        chosen.add(ChosenItem);
-        System.out.println(chosen+"hh");*/
+        order = new Item();
+        order.setId_item(Id_Push);
+        order.setQuantity(nbr);
+        orders.add(order);
+        System.out.println(orders.get(0).getQuantity()+"digzefuygezygfuyzegfuyezgfuyzeuyuezgfuezfuy");
 
-        System.out.println("hh");
+        a++;
+        //NbrCart.setText(String.valueOf(a));
+
+
+    }
+    @FXML
+    void Undo(MouseEvent event) {
+
+        ItemPane.setVisible(false);
+        gridpane.setEffect(null);
+        NbrItems.setText("1");
+        Total.setText("Total : "+priceItem+" DHs");
+
+
+
+
+
+
+    }
+    public void ConfirmQuantity(){
+
+            ItemPane.setVisible(true);
+            DropShadow dropShadow = new DropShadow();
+            dropShadow.setColor(Color.rgb(255, 165, 0));
+
+            GaussianBlur blur = new GaussianBlur(5);
+            gridpane.setEffect(blur);
+
+            translate.setFromY(0);
+            translate.setNode(ItemPane);
+            ItemPane.setEffect(dropShadow);
+            translate.setDuration(Duration.millis(1000));
+            translate.setByY(-10);
+            translate.play();
+
     }
 
     @FXML
     void chooseItem(ActionEvent event) throws MalformedURLException {
+        System.out.println("nooooooooooooooooooo"+nbr);
 
 
         System.out.println("salad 1 was clicked!");
         if (event.getSource() instanceof Button) {
 
             Button clickedButton = (Button) event.getSource();
+            t =priceItem;
 
             if (clickedButton.getId().equals("1")) {
 
-                label.setText(items.get(0).getNameItem());
-                priceItem = items.get(0).getPriceItem();
-                String path = items.get(0).getImgItem();
+                Id_Push =Integer.parseInt(clickedButton.getId())-1;
+                label.setText(items.get(Id_Push).getNameItem());
+                priceItem = items.get(Id_Push).getPriceItem();
+                String path = items.get(Id_Push).getImgItem();
                 File file = new File(path);
                 String localUrl = file.toURI().toURL().toString();
                 javafx.scene.image.Image thumbnail = new Image(localUrl,false);
                 Img.setImage(thumbnail);
 
-                while (chosenItem == 0) {
-
-                    DropShadow dropShadow = new DropShadow();
-                   // dropShadow.setColor(Color.ORANGE);
-
-                    GaussianBlur blur = new GaussianBlur(5);
-                    gridpane.setEffect(blur);
-
-                    TranslateTransition translate = new TranslateTransition();
-                    translate.setNode(ItemPane);
-                    ItemPane.setVisible(true);
-                    translate.setDuration(Duration.millis(1000));
-                    translate.setByY(-10);
-                    translate.play();
-                    chosenItem++;
-                }
+                ConfirmQuantity();
 
 
             } else if (clickedButton.getId().equals("2")) {
-                label.setText(items.get(1).getNameItem());
-                priceItem = items.get(1).getPriceItem();
-                String path = items.get(1).getImgItem();
+                Id_Push =Integer.parseInt(clickedButton.getId())-1;
+                label.setText(items.get(Id_Push).getNameItem());
+                priceItem = items.get(Id_Push).getPriceItem();
+                String path = items.get(Id_Push).getImgItem();
                 File file = new File(path);
                 String localUrl = file.toURI().toURL().toString();
                 javafx.scene.image.Image thumbnail = new Image(localUrl,false);
                 Img.setImage(thumbnail);
 
-                while (chosenItem == 0) {
-                    DropShadow dropShadow = new DropShadow();
-                    //dropShadow.setColor(Color.ORANGE);
-
-                    GaussianBlur blur = new GaussianBlur(5);
-                    gridpane.setEffect(blur);
-
-                    TranslateTransition translate = new TranslateTransition();
-                    translate.setNode(ItemPane);
-                    ItemPane.setVisible(true);
-                    translate.setDuration(Duration.millis(1000));
-                    translate.setByY(-10);
-                    translate.play();
-                    chosenItem++;
-                }
+                ConfirmQuantity();
 
             } else if (clickedButton.getId().equals("3")) {
-                label.setText(items.get(2).getNameItem());
-                priceItem = items.get(2).getPriceItem();
-                String path = items.get(2).getImgItem();
+                Id_Push =Integer.parseInt(clickedButton.getId())-1;
+                label.setText(items.get(Id_Push).getNameItem());
+                priceItem = items.get(Id_Push).getPriceItem();
+                String path = items.get(Id_Push).getImgItem();
                 File file = new File(path);
                 String localUrl = file.toURI().toURL().toString();
                 javafx.scene.image.Image thumbnail = new Image(localUrl,false);
                 Img.setImage(thumbnail);
 
-                while (chosenItem == 0) {
+                ConfirmQuantity();
 
-                    DropShadow dropShadow = new DropShadow();
-                    //dropShadow.setColor(Color.ORANGE);
-
-                    GaussianBlur blur = new GaussianBlur(5);
-                    gridpane.setEffect(blur);
-
-                    TranslateTransition translate = new TranslateTransition();
-                    translate.setNode(ItemPane);
-                    ItemPane.setVisible(true);
-                    translate.setDuration(Duration.millis(1000));
-                    translate.setByY(-10);
-                    translate.play();
-                    chosenItem++;
-                }
 
             } else if (clickedButton.getId().equals("4")) {
-                label.setText(items.get(3).getNameItem());
-                priceItem = items.get(3).getPriceItem();
-                String path = items.get(3).getImgItem();
+                Id_Push =Integer.parseInt(clickedButton.getId())-1;
+                label.setText(items.get(Id_Push).getNameItem());
+                priceItem = items.get(Id_Push).getPriceItem();
+                String path = items.get(Id_Push).getImgItem();
                 File file = new File(path);
                 String localUrl = file.toURI().toURL().toString();
                 javafx.scene.image.Image thumbnail = new Image(localUrl,false);
                 Img.setImage(thumbnail);
 
-                while (chosenItem == 0) {
 
-                    DropShadow dropShadow = new DropShadow();
-                    //dropShadow.setColor(Color.ORANGE);
-
-                    GaussianBlur blur = new GaussianBlur(5);
-                    gridpane.setEffect(blur);
-
-                    TranslateTransition translate = new TranslateTransition();
-                    translate.setNode(ItemPane);
-                    ItemPane.setVisible(true);
-                    translate.setDuration(Duration.millis(1000));
-                    translate.setByY(-10);
-                    translate.play();
-                    chosenItem++;
-                }
+                ConfirmQuantity();
 
 
             }

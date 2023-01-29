@@ -101,14 +101,20 @@
                </font>
             </Label>
             <Button fx:id="IncreaseButton" layoutX="281.0" layoutY="15.0" mnemonicParsing="false" onAction="#Increase" prefHeight="23.0" prefWidth="25.0" stylesheets="@../style.css" text="+" textFill="WHITE" />
-            <Button fx:id="AddCartBtn" layoutX="198.0" layoutY="63.0" mnemonicParsing="false" onAction="#AddToCart" prefHeight="26.0" prefWidth="114.0" style="-fx-background-color: #de8a23;" text="add to cart" textFill="WHITE" />
+            <Button fx:id="AddCartBtn" layoutX="198.0" layoutY="71.0" mnemonicParsing="false" onAction="#AddToCart" prefHeight="18.0" prefWidth="102.0" style="-fx-background-color: #de8a23;" text="add to cart" textFill="WHITE" />
             <Label fx:id="Total" layoutX="22.0" layoutY="63.0" prefHeight="30.0" prefWidth="155.0" text="Total :  45  Dhs" textFill="WHITE">
                <font>
                   <Font name="Arial" size="15.0" />
                </font>
             </Label>
+            <ImageView fx:id="Clear" fitHeight="14.0" fitWidth="14.0" layoutX="-3.0" layoutY="-4.0" onMouseClicked="#Undo">
+               <image>
+                  <Image url="@../Assets/clair.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
+      <Label fx:id="NbrCart" alignment="CENTER" layoutX="299.0" layoutY="13.0" prefHeight="14.0" prefWidth="18.0" style="-fx-background-color: white; -fx-background-radius: 90;" text="0" textAlignment="CENTER" />
 
     </children>
 </AnchorPane>

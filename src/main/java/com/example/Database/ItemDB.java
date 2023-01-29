@@ -7,6 +7,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.uorders.MenuCatController.ChosenId;
+
 public class ItemDB {
 
     private static List<Item> items = new ArrayList();
@@ -14,6 +16,7 @@ public class ItemDB {
     private Item item;
 
     public static List<Item> getData(){
+
 
         items = new ArrayList();
         Item item ;
@@ -25,7 +28,7 @@ public class ItemDB {
             Statement st;
             st = con.createStatement();
 
-            ResultSet rs = st.executeQuery("select * from menu_item where menu_id = 1");
+            ResultSet rs = st.executeQuery("select * from menu_item where menu_id ="+ChosenId);
 
 
             while (rs.next()) {

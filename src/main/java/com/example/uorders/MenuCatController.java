@@ -73,18 +73,25 @@ public class MenuCatController {
                 ChosenId=1;
             }else if (clickedButton.getId().equals("2")) {
                 System.out.println("salad 1 was clicked!");
+                ChosenId=2;
             }else if (clickedButton.getId().equals("3")) {
                 System.out.println("sandwish 1 was clicked!");
+                ChosenId=3;
             }else if (clickedButton.getId().equals("4")) {
                 System.out.println("tacos 1 was clicked!");
+                ChosenId=4;
             }else if (clickedButton.getId().equals("5")) {
                 System.out.println("Beldi 1 was clicked!");
+                ChosenId=5;
             }else if (clickedButton.getId().equals("6")) {
                 System.out.println("pizza 1 was clicked!");
+                ChosenId=6;
             }else if (clickedButton.getId().equals("7")) {
                 System.out.println("pasta 1 was clicked!");
+                ChosenId=7;
             }else if (clickedButton.getId().equals("8")) {
                 System.out.println("drinks 1 was clicked!");
+                ChosenId=8;
             }
 
             //Menu.getScene().getWindow().hide();

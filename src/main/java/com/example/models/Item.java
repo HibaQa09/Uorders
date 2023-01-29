@@ -4,6 +4,11 @@ import com.example.uorders.MenuItemController;
 import javafx.scene.control.Button;
 
 public class Item {
+    public int getId_item() {
+        return Id_item;
+    }
+
+    private int Id_item;
 
     private String nameItem;
     private String imgItem;
@@ -41,6 +46,20 @@ public class Item {
     public void setDetailsItem(String detailsItem) {
         this.detailsItem = detailsItem;
     }
+
+    public void setId_item(int id_item) {
+        Id_item = id_item;
+    }
+
+    public int getQuantity() {
+        return Quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        Quantity = quantity;
+    }
+
+    private int Quantity;
 
 
 
